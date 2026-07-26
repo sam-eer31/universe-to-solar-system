@@ -24,6 +24,24 @@ html, body {
 
 /* Hide scrollbar for seamless experience */
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  display: none;
 }
+* {
+  scrollbar-width: none;
+}
+
+@keyframes wheel-up { 
+  0%, 100% { transform: translateY(4px); opacity: 0; } 
+  10% { opacity: 1; } 
+  50% { transform: translateY(-4px); opacity: 1; } 
+  90% { opacity: 0; } 
+} 
+@keyframes pinch-top { 
+  0%, 100% { transform: translate(0, 0); opacity: 0.2; } 
+  50% { transform: translate(-6px, -10px); opacity: 1; } 
+} 
+@keyframes pinch-bottom { 
+  0%, 100% { transform: translate(0, 0); opacity: 0.2; } 
+  50% { transform: translate(6px, 10px); opacity: 1; } 
+}
+
