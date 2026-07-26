@@ -32,7 +32,7 @@ export default function PropertiesPanel() {
   const activeScene = universeData.scenes.find(s => s.id === activeSceneId);
   if (!activeScene) return null;
 
-  const selectedCircle = selectedCircleId ? activeScene.circles.find(c => c.id === selectedCircleId) : null;
+  const selectedCircle = selectedCircleId ? activeScene.circles?.find(c => c.id === selectedCircleId) : null;
 
   return (
     <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
