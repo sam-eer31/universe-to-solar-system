@@ -3,8 +3,6 @@
     <img src="public/logo-main.png" alt="Project Infinity Logo" width="400" />
   </a>
 
-  <h3 align="center">Project Infinity</h3>
-
   <p align="center">
     A cinematic, scroll-based 3D voyage through the cosmos.
     <br />
