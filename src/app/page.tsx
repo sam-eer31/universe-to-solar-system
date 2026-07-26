@@ -92,7 +92,7 @@ export default function Home() {
     };
   }, [mounted, universeData, setScrollProgress]);
 
-  const focusedPlanet = useAppStore(state => state.focusedPlanet);
+
 
   useEffect(() => {
     if (lenisRef.current) {
