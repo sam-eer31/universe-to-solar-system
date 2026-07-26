@@ -8,6 +8,7 @@ import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Link from "next/link";
 import LoadingScreen from "@/components/LoadingScreen";
+import ScrollGuide from "@/components/ScrollGuide";
 
 const SceneManager = dynamic(() => import("@/components/three/SceneManager"), { ssr: false });
 
@@ -189,6 +190,10 @@ export default function Home() {
             </Link>
           )}
         </div>
+      )}
+
+      {hasScenes && started && (
+        <ScrollGuide progress={localProgress} />
       )}
 
       {/* Render canvas full screen */}
