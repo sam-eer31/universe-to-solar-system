@@ -92,15 +92,17 @@ export default function Home() {
     };
   }, [mounted, universeData, setScrollProgress]);
 
+  const focusedPlanet = useAppStore(state => state.focusedPlanet);
+
   useEffect(() => {
     if (lenisRef.current) {
-      if (started) {
+      if (started && !focusedPlanet) {
         lenisRef.current.start();
       } else {
         lenisRef.current.stop();
       }
     }
-  }, [started]);
+  }, [started, focusedPlanet]);
 
   // Handle pinch to zoom/scroll on mobile
   useEffect(() => {

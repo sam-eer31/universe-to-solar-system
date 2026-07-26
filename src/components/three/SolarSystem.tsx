@@ -139,8 +139,8 @@ export default function SolarSystem() {
       if (focusedPlanet) {
         e.preventDefault();
         
-        // deltaY > 0 means scroll down
-        const zoomDelta = -e.deltaY * 0.001;
+        // deltaY > 0 means scroll down (zooms out)
+        const zoomDelta = e.deltaY * 0.001;
         let newZoom = planetZoom + zoomDelta;
         
         if (newZoom > 1.05) {
