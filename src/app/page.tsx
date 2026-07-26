@@ -175,7 +175,7 @@ export default function Home() {
       {!hasScenes && (
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
           <h1 className="text-4xl md:text-7xl font-light tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
-            Journey Through The<br />Observable Universe
+            Project Infinity
           </h1>
           <p className="text-white/50 font-mono text-sm mb-12 max-w-lg">
             A cinematic, scroll-based experience. The universe is currently empty.

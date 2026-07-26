@@ -13,9 +13,6 @@ export default function Header() {
             className="object-cover p-1 opacity-80 group-hover:opacity-100 transition-opacity invert" 
           />
         </div>
-        <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/70 group-hover:text-white transition-colors">
-          Universe
-        </span>
       </Link>
       
       <nav className="hidden md:flex items-center gap-8">
