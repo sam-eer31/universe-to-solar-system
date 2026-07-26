@@ -60,16 +60,16 @@ export default function Home() {
         // --- THE PERFECT SLOWMO BRICK WALL ---
         // If they flick hard into the zone from above, stop them at the entrance.
         if (lenis.animatedScroll <= startZone && lenis.targetScroll > startZone) {
-           lenis.targetScroll = startZone + 5;
+           lenis.targetScroll = startZone + 1;
         } 
         // If they flick hard into the zone from below, stop them at the exit.
         else if (lenis.animatedScroll >= endZone && lenis.targetScroll < endZone) {
-           lenis.targetScroll = endZone - 5;
+           lenis.targetScroll = endZone - 1;
         }
         // If they are currently inside the zone, severely cap how far their target can lead ahead.
         // This makes it physically impossible to scroll fast through this area, no matter the hardware!
         else if (lenis.animatedScroll > startZone && lenis.animatedScroll < endZone) {
-           const maxLead = 25; // 25px max target lead per frame = extremely slow!
+           const maxLead = 4; // 4px max target lead per frame = extremely slow!
            if (lenis.targetScroll > lenis.animatedScroll + maxLead) {
               lenis.targetScroll = lenis.animatedScroll + maxLead;
            } else if (lenis.targetScroll < lenis.animatedScroll - maxLead) {
@@ -148,7 +148,27 @@ export default function Home() {
           // Pinch expanding -> scroll down (progress timeline)
           if (lenisRef.current) {
             const scrollDelta = distanceDelta * 4.0; 
-            window.scrollBy(0, scrollDelta);
+            
+            // --- PERFECT SLOWMO BRICK WALL (MOBILE PINCH) ---
+            const effA = 1/3 - 0.05;
+            const effB = 1/3;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const startZone = effA * maxScroll;
+            const endZone = effB * maxScroll;
+            
+            let targetScroll = window.scrollY + scrollDelta;
+            
+            if (window.scrollY <= startZone && targetScroll > startZone) {
+               targetScroll = startZone + 1;
+            } else if (window.scrollY >= endZone && targetScroll < endZone) {
+               targetScroll = endZone - 1;
+            } else if (window.scrollY > startZone && window.scrollY < endZone) {
+               const maxDelta = 4; // VERY slow pinch
+               if (targetScroll > window.scrollY + maxDelta) targetScroll = window.scrollY + maxDelta;
+               if (targetScroll < window.scrollY - maxDelta) targetScroll = window.scrollY - maxDelta;
+            }
+            
+            window.scrollTo(0, targetScroll);
           }
         }
       }
