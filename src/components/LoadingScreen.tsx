@@ -75,22 +75,6 @@ export default function LoadingScreen({ onStart }: { onStart: () => void }) {
 
         <button
           onClick={() => {
-            // Request fullscreen for immersive experience ONLY on mobile/tablets
-            try {
-              if (window.matchMedia("(pointer: coarse)").matches) {
-                const docElm = document.documentElement as any;
-                if (docElm.requestFullscreen) {
-                  docElm.requestFullscreen().catch((err: any) => console.log("Fullscreen request failed", err));
-                } else if (docElm.webkitRequestFullscreen) { 
-                  docElm.webkitRequestFullscreen();
-                } else if (docElm.mozRequestFullScreen) {
-                  docElm.mozRequestFullScreen();
-                }
-              }
-            } catch (e) {
-              console.log("Fullscreen API not supported", e);
-            }
-
             setFading(true);
             onStart();
             setTimeout(() => setHidden(true), 1000);
