@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <a href="https://projectinfinity.vercel.app">
+    <img src="public/logo-main.png" alt="Project Infinity Logo" width="400" />
+  </a>
 
-## Getting Started
+  <h3 align="center">Project Infinity</h3>
 
-First, run the development server:
+  <p align="center">
+    A cinematic, scroll-based 3D voyage through the cosmos.
+    <br />
+    <a href="https://projectinfinity.vercel.app"><strong>Explore the Universe »</strong></a>
+    <br />
+    <br />
+  </p>
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌌 Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Project Infinity** is a highly immersive, interactive 3D web experience that transforms the browser into a window to the cosmos. Designed with a cinematic approach to web navigation, it leverages seamless scroll-driven storytelling to guide users through a meticulously crafted digital solar system. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+By combining state-of-the-art WebGL rendering with buttery-smooth scroll physics, Project Infinity delivers a premium, app-like exploration experience directly on the web—accessible across both desktop and mobile devices.
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Cinematic Scroll Progression:** A bespoke, physics-based scrolling engine (powered by Lenis) that translates your scroll or pinch-to-zoom gestures into a majestic journey through space. 
+- **Interactive 3D Solar System:** Rendered entirely in real-time. Click on celestial bodies to lock focus, explore orbits, and interact with the cosmos.
+- **Dynamic Lighting & Materials:** Features custom shaders, bloom effects, and dynamic starfields to create a breathtakingly realistic and atmospheric environment.
+- **Mobile Optimized:** Full support for touch interactions, including custom pinch-to-zoom logic that maintains the precise cinematic pacing of the desktop experience.
+- **Performant by Design:** Built on top of React Three Fiber, ensuring high framerates and efficient memory management even with complex 3D assets.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Engineered with modern web technologies for maximum performance and visual fidelity:
 
-## Deploy on Vercel
+- **Framework:** [Next.js 14/15](https://nextjs.org/) (React)
+- **3D Engine:** [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)
+- **3D Helpers:** [@react-three/drei](https://github.com/pmndrs/drei) & [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing)
+- **Scroll Physics:** [Lenis](https://lenis.studiofreight.com/)
+- **Animation:** [GSAP](https://gsap.com/) & [Framer Motion](https://www.framer.com/motion/)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To run Project Infinity locally and explore the source code:
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/sam-eer31/universe-to-solar-system.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd universe-to-solar-system
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+5. Open your browser and visit `http://localhost:3000`
+
+## 📱 Interactive Controls
+
+- **Desktop:** Use the scroll wheel to traverse the timeline. Click and drag to rotate the camera view. Click on any planet to focus on it.
+- **Mobile:** Use the pinch-to-zoom gesture to travel forward/backward through the cinematic sequence. Swipe to rotate your view. 
+
+---
+<div align="center">
+  <p>Designed and built for the modern web.</p>
+</div>
