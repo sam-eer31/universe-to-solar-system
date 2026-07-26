@@ -160,7 +160,7 @@ export const useAppStore = create<AppState>()(
       if (scene.id === sceneId) {
         return {
           ...scene,
-          circles: scene.circles.map(c => c.id === circleId ? { ...c, ...data } : c)
+          circles: (scene.circles || []).map(c => c.id === circleId ? { ...c, ...data } : c)
         };
       }
       return scene;
@@ -172,7 +172,7 @@ export const useAppStore = create<AppState>()(
     if (!state.universeData) return state;
     const newScenes = state.universeData.scenes.map(scene => {
       if (scene.id === sceneId) {
-        return { ...scene, circles: [...scene.circles, circle] };
+        return { ...scene, circles: [...(scene.circles || []), circle] };
       }
       return scene;
     });
@@ -183,8 +183,9 @@ export const useAppStore = create<AppState>()(
     if (!state.universeData) return state;
     const newScenes = state.universeData.scenes.map(scene => {
       if (scene.id === sceneId) {
-        return { ...scene, circles: scene.circles.filter(c => c.id !== circleId) };
+        return { ...scene, circles: (scene.circles || []).filter(c => c.id !== circleId) };
       }
+      return scene;
     });
     return { universeData: { ...state.universeData, scenes: newScenes } };
   }),

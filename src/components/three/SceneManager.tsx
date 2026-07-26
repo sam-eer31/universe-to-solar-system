@@ -39,7 +39,6 @@ export default function SceneManager() {
             zoomSpeed={3.0}
             screenSpacePanning={true}
             mouseButtons={{
-              LEFT: THREE.MOUSE.NONE,   // Left click is for dragging images
               MIDDLE: THREE.MOUSE.DOLLY,
               RIGHT: THREE.MOUSE.PAN    // Right click is for panning the camera
             }}
@@ -60,7 +59,7 @@ export default function SceneManager() {
         <Preload all />
 
         {/* Cinematic Post Processing */}
-        <EffectComposer disableNormalPass multisampling={0}>
+        <EffectComposer multisampling={4}>
           <Bloom luminanceThreshold={0.5} mipmapBlur intensity={0.5} />
           <Noise opacity={0.03} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />
