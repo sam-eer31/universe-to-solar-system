@@ -40,7 +40,7 @@ export default function ScrollGuide({ progress }: { progress: number }) {
             <div className="absolute w-2.5 h-2.5 bg-white/80 rounded-full" style={{ animation: 'pinch-bottom 2s infinite ease-in-out' }} />
           </div>
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/70 text-center">
-            Pinch or Swipe<br/>to Explore
+            Pinch Outward<br/>to Explore
           </span>
         </>
       )}
