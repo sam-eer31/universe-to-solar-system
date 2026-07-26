@@ -41,6 +41,7 @@ export default function Home() {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
+      wheelMultiplier: -1, // Inverts the mouse wheel direction for the entire website
     });
     lenisRef.current = lenis;
     lenis.stop(); // Stop scroll until user starts
