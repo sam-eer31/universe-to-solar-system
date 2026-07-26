@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Github } from 'lucide-react';
 
 export default function Header() {
   return (
@@ -20,9 +21,10 @@ export default function Header() {
           href="https://github.com/sam-eer31/universe-to-solar-system" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="font-mono text-[10px] uppercase tracking-[0.15em] text-white/50 hover:text-white transition-colors flex items-center gap-2 border border-white/20 hover:border-white/50 bg-black/20 hover:bg-white/10 px-4 py-2 rounded-full backdrop-blur-md"
+          className="group/github font-mono text-[10px] uppercase tracking-[0.15em] text-white/70 hover:text-white transition-all duration-300 flex items-center gap-2 border border-white/20 hover:border-white/50 bg-black/20 hover:bg-white/10 px-4 py-2 rounded-full backdrop-blur-md"
         >
-          View on GitHub
+          <Github className="w-3.5 h-3.5 opacity-70 group-hover/github:opacity-100 transition-opacity" />
+          GitHub
         </a>
       </nav>
     </header>
