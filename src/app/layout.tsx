@@ -8,9 +8,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Project Infinity",
   description: "A cinematic web experience",
-  icons: {
-    icon: '/logo-icon.png',
-  },
 };
 
 export const viewport: Viewport = {

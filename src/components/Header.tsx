@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between h-20 px-6 md:px-12 bg-gradient-to-b from-black/90 via-black/50 to-transparent pointer-events-auto">
       <Link href="/" className="flex items-center gap-3 group">
-        <div className="relative h-8 w-48">
+        <div className="relative h-14 w-48 md:w-64">
           <Image 
             src="/logo.png" 
             alt="Project Infinity Logo" 
