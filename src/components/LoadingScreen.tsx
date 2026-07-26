@@ -1,6 +1,7 @@
 "use client";
 import { useProgress } from "@react-three/drei";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function LoadingScreen({ onStart }: { onStart: () => void }) {
   const { progress, total, active } = useProgress();
@@ -57,9 +58,16 @@ export default function LoadingScreen({ onStart }: { onStart: () => void }) {
   return (
     <div className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black transition-opacity duration-1000 ${fading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       <div className="flex flex-col items-center max-w-md w-full px-6 text-center">
-        <h1 className="text-3xl md:text-5xl font-light tracking-[0.2em] uppercase text-white mb-8">
-          Universe
-        </h1>
+        <div className="flex justify-center mb-8">
+          <Image 
+            src="/logo-main.png" 
+            alt="Universe Logo" 
+            width={300} 
+            height={100} 
+            className="w-48 md:w-64 h-auto object-contain"
+            priority
+          />
+        </div>
         
         <div className="w-full h-[2px] bg-white/10 rounded-full mb-6 overflow-hidden relative">
           <div 
