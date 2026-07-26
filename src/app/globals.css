@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000;
+  --color-foreground: #ededed;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar for seamless experience */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

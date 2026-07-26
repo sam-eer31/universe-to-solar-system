@@ -1,0 +1,148 @@
+{
+  "cameraSettings": {
+    "baseFov": 45,
+    "maxDepth": -100,
+    "hasSolarSystem": true,
+    "finalCircle": {
+      "x": 0.29005636047141503,
+      "y": -2.1034522186742737,
+      "radius": 0.00014851080373291692
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene_1784661650538",
+      "title": "1",
+      "image": "/assets/images/1784661650533-1.png",
+      "depth": 0,
+      "scale": 10,
+      "rotation": 0,
+      "position": {
+        "x": 1.5422656308358584,
+        "y": -0.34589700066009293,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [
+        {
+          "id": "circle_1784661650538",
+          "centerX": 0.37904961936463055,
+          "centerY": 0.6764095294552933,
+          "radius": 0.16869363645427213,
+          "targetSceneId": "none",
+          "cameraOffset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "transitionDuration": 1,
+          "zoomMultiplier": 10,
+          "optionalRotation": 0
+        }
+      ]
+    },
+    {
+      "id": "scene_1784661665739",
+      "title": "2",
+      "image": "/assets/images/1784661665734-2.png",
+      "depth": 0,
+      "scale": 1.4690039773538144,
+      "rotation": 0,
+      "position": {
+        "x": 0.7062186245341673,
+        "y": -2.1421518202270566,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.16
+    },
+    {
+      "id": "scene_1784661682767",
+      "title": "3",
+      "image": "/assets/images/1784661682762-3.png",
+      "depth": 0,
+      "scale": 0.2686312548962485,
+      "rotation": 0,
+      "position": {
+        "x": 0.27050187753802124,
+        "y": -2.058505871470689,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.16
+    },
+    {
+      "id": "scene_1784669608485",
+      "title": "4-1",
+      "image": "/assets/images/1784669608480-4-1.png",
+      "depth": 0,
+      "scale": 0.044673212778808806,
+      "rotation": 0,
+      "position": {
+        "x": 0.2937875288666443,
+        "y": -2.094856952895321,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.53
+    },
+    {
+      "id": "scene_1784669640040",
+      "title": "5-1",
+      "image": "/assets/images/1784669640035-5-1.png",
+      "depth": 0,
+      "scale": 0.010594553695874403,
+      "rotation": 0,
+      "position": {
+        "x": 0.2900633601058876,
+        "y": -2.103493585338148,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.46
+    },
+    {
+      "id": "scene_1784669658787",
+      "title": "6-2",
+      "image": "/assets/images/1784669658783-6-2.png",
+      "depth": 0,
+      "scale": 0.002928058419753332,
+      "rotation": -0.011592653589793,
+      "position": {
+        "x": 0.29060496857066964,
+        "y": -2.103288282875314,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.31
+    },
+    {
+      "id": "scene_1784729644965",
+      "title": "7",
+      "image": "/assets/images/1784729644955-7.png",
+      "depth": 0,
+      "scale": 0.0005180622806011506,
+      "rotation": 0,
+      "position": {
+        "x": 0.2900658291815895,
+        "y": -2.1034512325321892,
+        "z": 0
+      },
+      "opacity": 1,
+      "transitionSpeed": 1,
+      "circles": [],
+      "feathering": 0.62
+    }
+  ]
+}
