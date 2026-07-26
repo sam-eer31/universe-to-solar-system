@@ -180,9 +180,11 @@ export default function Home() {
           <p className="text-white/50 font-mono text-sm mb-12 max-w-lg">
             A cinematic, scroll-based experience. The universe is currently empty.
           </p>
-          <Link href="/editor" className="pointer-events-auto px-6 py-3 border border-white/20 hover:bg-white/10 rounded-full text-sm font-medium tracking-widest uppercase transition-colors">
-            Enter Editor
-          </Link>
+          {process.env.NODE_ENV === 'development' && (
+            <Link href="/editor" className="pointer-events-auto px-6 py-3 border border-white/20 hover:bg-white/10 rounded-full text-sm font-medium tracking-widest uppercase transition-colors">
+              Enter Editor
+            </Link>
+          )}
         </div>
       )}
 
