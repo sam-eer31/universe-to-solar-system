@@ -45,3 +45,23 @@ html, body {
   50% { transform: translate(6px, 10px); opacity: 1; } 
 }
 
+@keyframes drag-horizontal {
+  0%, 100% { transform: translateX(0); opacity: 0.5; }
+  25% { transform: translateX(-12px); opacity: 1; }
+  75% { transform: translateX(12px); opacity: 1; }
+}
+
+@keyframes swipe-horizontal {
+  0% { transform: translateX(15px); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(-15px); opacity: 0; }
+}
+
+@keyframes move-all-dir {
+  0%, 100% { transform: translate(0px, 0px); }
+  20% { transform: translate(6px, 0px); }
+  40% { transform: translate(-6px, 0px); }
+  60% { transform: translate(0px, 6px); }
+  80% { transform: translate(0px, -6px); }
+}

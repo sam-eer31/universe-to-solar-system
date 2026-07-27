@@ -9,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import Link from "next/link";
 import LoadingScreen from "@/components/LoadingScreen";
 import ScrollGuide from "@/components/ScrollGuide";
+import RotateGuide from "@/components/RotateGuide";
 
 const SceneManager = dynamic(() => import("@/components/three/SceneManager"), { ssr: false });
 
@@ -213,7 +214,10 @@ export default function Home() {
       )}
 
       {hasScenes && started && (
-        <ScrollGuide progress={localProgress} />
+        <>
+          <ScrollGuide progress={localProgress} />
+          <RotateGuide progress={localProgress} />
+        </>
       )}
 
       {/* Render canvas full screen */}
